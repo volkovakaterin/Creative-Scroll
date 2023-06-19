@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+    --color-header: #f4efec;
+    --color-text: #cdc6c3;
+    --gallery-gap: calc(var(--index) * 10)
+    
+}
+
+@font-face {
+    font-family: realway-c;
+    src: url(../design-img/fonts/raleway-regular.woff2);
+}
+
+@font-face {
+    font-family: outfit-c;
+    src: url(../design-img/fonts/outfit-regular.woff2);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: outfit-c;
+}
+
+/* will-change */
+.content, .main-section, .main-header, .gallery-right, .gallery-left {
+    will-change: transform;
+} 
+
+body {
+    background-image: url(../design-img/img/bg.jpg);
+    background-size: 50px;
+    color: #f4efec;
+    font-family: realway-c;
+    overflow-x: hidden;
+}
+
+.lilac {
+    width: calc(var(--index) * 35);
+    position: absolute;
+    left: 40vw;
+    top: 5vh;
+    z-index: -1;
+}
+
+.container {
+    padding: 0 7vw;
+}
+
+.main-header {
+    height: 100vh;
+}
+
+.main-title {
+    font-size: calc(var(--index) * 8);
+    position: absolute;
+    width: min-content;
+    top: 30vh;
+    left: 10vw;
+    text-shadow:1px 1px 0 rgb(213,213,213),2px 2px 0 rgb(170,170,170),3px 3px 0 rgb(128,128,128),4px 4px 0 rgb(85,85,85),5px 5px 0 rgb(43,43,43),6px 6px 1px rgba(0,0,0,1);
+    -webkit-text-shadow:1px 1px 0 rgb(213,213,213),2px 2px 0 rgb(170,170,170),3px 3px 0 rgb(128,128,128),4px 4px 0 rgb(85,85,85),5px 5px 0 rgb(43,43,43),6px 6px 1px rgba(0,0,0,1);
+    -moz-text-shadow:1px 1px 0 rgb(213,213,213),2px 2px 0 rgb(170,170,170),3px 3px 0 rgb(128,128,128),4px 4px 0 rgb(85,85,85),5px 5px 0 rgb(43,43,43),6px 6px 1px rgba(0,0,0,1);
+}
+
+.text-block-header, .text-block-descrip {
+    text-shadow: 1px 1px 2px #00ff29, 0 0 1em #b400ff, 0 0 0.2em #b400ff;
+}
+
+.gallery {
+    display: flex;
+    padding: calc(var(--index) * 8) 0;
+}
+
+.gallery-left {
+    margin-top: calc(var(--index)* 15);
+} 
+
+.gallery-right {
+    margin-top: calc(var(--gallery-gap) * 0.7);
+} 
+
+.gallery-item {
+    max-width: calc(var(--index) * 25);
+    margin-bottom: var(--gallery-gap);
+    max-height: 90vh;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.gallery > * {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-block {
+    color: var(--color-text);
+    position: relative;
+    box-shadow: none;
+} 
+
+.text-block-header {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.1rem;
+    color: var(--color-header);
+    margin-bottom: 1.5rem;
+} 
+
+.text-block-descrip {
+    line-height: 1.75;
+    letter-spacing: 0.1rem;
+} 
